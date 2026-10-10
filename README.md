@@ -1,5 +1,5 @@
 # Campus Venture Lab
-A React portfolio demonstration by Vahid Ghorbani for JR51349.
+A React portfolio demonstration by Vahid Ghorbani.
 
 ## Review
 Open dist/Campus_Venture_Lab.html in a desktop browser. No installation, server or internet connection is needed. Allocate the budget, enter a short rationale, and complete Concept, Prototype and Campus pilot. Visit Instructor studio to adjust funding, revenue per user and formative score weights, inspect formulas, and download the embedded Excel model.
