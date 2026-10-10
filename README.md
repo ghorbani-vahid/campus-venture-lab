@@ -17,4 +17,3 @@ npm test
 
 React 19, JavaScript modules, esbuild. Independent engine functions, CSS responsive layouts and JSDOM interaction tests. reference/Campus_Venture_Model.xlsx contains editable inputs and Excel formulas. workbook-results.json contains 27 recalculated reference outputs for all three default rounds, compared against the web engine. This baseline is not exhaustive validation of all possible rules. Seven tests cover formula parity, funding reconciliation, invalid allocations, caps, price/weight changes and student/instructor interactions. Real-browser visual and native Excel checks were not available in this environment; test these before presenting professionally.
 
-Developed with AI assistance. Vahid should review the assumptions, run the activity and understand the source before using it as evidence in an application.
