@@ -42,7 +42,7 @@ The activity supports discussion of investment prioritisation, risk, project rea
 
 ## Try the simulation
 
-**Online:** open the project's GitHub Pages site after publication.
+**Online:** open the project's GitHub Pages.
 
 **Offline:** open `dist/Campus_Venture_Lab.html` in a modern web browser.
 
@@ -124,4 +124,4 @@ The application does not transmit or persist student records. Decisions remain i
 **Vahid Ghorbani**  
 [vahid.ghorbani@rmit.edu.au](mailto:vahid.ghorbani@rmit.edu.au)
 
-The smart-parking scenario draws on the author's undergraduate project and Systems Engineering teaching experience. Campus Venture Lab is an independent educational demonstration, not an official RMIT course activity.
+Campus Venture Lab is an independent educational demonstration, not an official RMIT course activity.
