@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {calculate,initial,nextState,defaults} from '../src/engine.js';
+const fixture=JSON.parse(fs.readFileSync(new URL('../reference/workbook-results.json',import.meta.url)));
+test('27 spreadsheet outputs agree across three sequential rounds',()=>{for(const row of fixture){const r=calculate(row.state,row.decision,row.round);for(const[k,v]of Object.entries(row.expected))assert.ok(Math.abs(r[k]-v)<1e-7,k)}});
+test('cash reconciles with funding, revenue and investments',()=>{let s=initial();for(let i=0;i<3;i++){const r=calculate(s,[5,5,5,5],i);assert.equal(r.cash,s.cash+20+r.revenue);s=nextState(r)}assert.ok(Math.abs(s.cash-(120-s.spent+s.revenue))<1e-7)});
+test('blocks invalid investments and overspending',()=>{for(const d of [[41,0,0,0],[-1,1,0,0],[NaN,0,0,0],[1,2]])assert.throws(()=>calculate(initial(),d,0))});
+test('zero spending and capped outcomes produce finite scores',()=>{const r=calculate(initial(),[0,0,0,0],0);assert.equal(r.returnScore,0);assert.equal(r.cash,40);const cap=calculate({...initial(),quality:99,adoption:99},[10,10,10,10],2);assert.equal(cap.quality,100);assert.equal(cap.adoption,100);assert.ok(cap.score<=100)});
+test('price and score weight changes affect calculations',()=>{const a=calculate(initial(),[10,10,10,10],1),b=calculate(initial(),[10,10,10,10],1,{...defaults,price:240});assert.equal(b.revenue,a.revenue*2);const c=calculate(initial(),[10,10,10,10],1,{...defaults,weights:[100,0,0]});assert.equal(c.score,c.quality)});

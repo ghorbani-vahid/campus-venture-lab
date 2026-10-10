@@ -1,0 +1,83 @@
+[
+  {
+    "round": 0,
+    "state": {
+      "quality": 20,
+      "adoption": 10,
+      "cash": 0,
+      "revenue": 0,
+      "spent": 0
+    },
+    "decision": [
+      10,
+      12,
+      12,
+      6
+    ],
+    "expected": {
+      "quality": 53.6,
+      "adoption": 31.6,
+      "users": 0,
+      "revenue": 0,
+      "spent": 40,
+      "totalRevenue": 0,
+      "cash": 0,
+      "returnScore": 0,
+      "score": 25.56
+    }
+  },
+  {
+    "round": 1,
+    "state": {
+      "quality": 53.6,
+      "adoption": 31.6,
+      "cash": 0,
+      "revenue": 0,
+      "spent": 40
+    },
+    "decision": [
+      10,
+      12,
+      12,
+      6
+    ],
+    "expected": {
+      "quality": 87.2,
+      "adoption": 53.2,
+      "users": 186,
+      "revenue": 22.32,
+      "spent": 80,
+      "totalRevenue": 22.32,
+      "cash": 22.32,
+      "returnScore": 27.9,
+      "score": 53.28
+    }
+  },
+  {
+    "round": 2,
+    "state": {
+      "quality": 87.2,
+      "adoption": 53.2,
+      "cash": 22.32,
+      "revenue": 22.32,
+      "spent": 80
+    },
+    "decision": [
+      10,
+      12,
+      12,
+      6
+    ],
+    "expected": {
+      "quality": 100,
+      "adoption": 74.8,
+      "users": 748,
+      "revenue": 89.76,
+      "spent": 120,
+      "totalRevenue": 112.08000000000001,
+      "cash": 112.08000000000001,
+      "returnScore": 93.40000000000002,
+      "score": 89.8
+    }
+  }
+]
